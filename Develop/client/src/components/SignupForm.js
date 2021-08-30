@@ -40,6 +40,7 @@ useEffect(() => {
     }
 
     try {
+      console.log('adding user')
      const { data } = await addUser({
        variables: {...userFormData},
      });
@@ -47,7 +48,7 @@ useEffect(() => {
     } catch (err) {
       console.error(err);
       setShowAlert(true);
-    }
+    } 
 
     setUserFormData({
       username: '',
